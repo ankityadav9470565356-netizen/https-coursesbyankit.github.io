@@ -417,27 +417,263 @@ Courses by Ankit offers 300+ free and VIP online courses including Video Editing
 
 
 
+<!-- ================= VIP SECTION ================= -->
+<h2>🔥 VIP Course</h2>
 
-<!-- BUTTONS -->
+<!-- COURSE 1 -->
+<div class="button" onclick="toggleVIP('vip1')">
+  <img src="think school.jpg" class="course-img">
+  <span>Communication Masterclass - Think School (VIP)</span>
+</div>
+
+<div id="vip1" style="display:none;">
+  <div class="button" onclick="openVideo('proof3.mp4')">
+    <img src="proof.png" class="course-img">
+    <span>View Proof</span>
+  </div>
+
+  <a href="https://t.me/ytmn20" class="button">
+    <img src="dm.png" class="course-img">
+    <span>DM Me To Buy</span>
+  </a>
+</div>
+
+<!-- COURSE 2 -->
+<div class="button" onclick="toggleVIP('vip2')">
+  <img src="jeet.jpg" class="course-img">
+  <span>Jeet Selal - Himalayan Stallion All Course Combo (VIP)</span>
+</div>
+
+<div id="vip2" style="display:none;">
+  <div class="button" onclick="openVideo('proof2.mp4')">
+    <img src="proof.png" class="course-img">
+    <span>View Proof</span>
+  </div>
+
+  <a href="https://t.me/ytmn20" class="button">
+    <img src="dm.png" class="course-img">
+    <span>DM Me To Buy</span>
+  </a>
+</div>
+
+<!-- COURSE 3 -->
+<div class="button" onclick="toggleVIP('vip3')">
+  <img src="8.jpg" class="course-img">
+  <span>Jeet's Academy Presents - The Secret to 4M Followers in 8 Months(VIP)</span>
+</div>
+
+<div id="vip3" style="display:none;">
+  <div class="button" onclick="openVideo('proof1.mp4')">
+    <img src="proof.png" class="course-img">
+    <span>View Proof</span>
+  </div>
+
+  <a href="https://t.me/ytmn20" class="button">
+    <img src="dm.png" class="course-img">
+    <span>DM Me To Buy</span>
+  </a>
+</div>
+
+<!-- COURSE 4 -->
+<div class="button" onclick="toggleVIP('vip4')">
+  <img src="p.jpg" class="course-img">
+  <span>Rachit Singh Course(VIP)</span>
+</div>
+
+<div id="vip4" style="display:none;">
+  <div class="button" onclick="openVideo('proof4.mp4')">
+    <img src="proof.png" class="course-img">
+    <span>View Proof</span>
+  </div>
+
+  <a href="https://t.me/ytmn20" class="button">
+    <img src="dm.png" class="course-img">
+    <span>DM Me To Buy</span>
+  </a>
+</div>
+
+<!-- ================= VIDEO POPUP ================= -->
+<div id="videoModal" class="video-modal">
+  <div class="video-box">
+    <span class="close-btn" onclick="closeVideo()">✖</span>
+    <video id="popupVideo" controls autoplay playsinline webkit-playsinline></video>
+  </div>
+</div>
+
+<style>
+/* Modal background */
+.video-modal{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  padding:10px;
+  box-sizing:border-box;
+}
+
+/* Video container */
+.video-box{
+  position:relative;
+  width:90%;
+  max-width:700px;
+}
+
+/* Video element */
+.video-box video{
+  width:100%;
+  height:auto;
+  border-radius:15px;
+  background:black;
+}
+
+/* Close button */
+.close-btn{
+  position:absolute;
+  top:-40px;
+  right:0;
+  font-size:30px;
+  cursor:pointer;
+  color:white;
+  z-index:1000;
+}
+
+/* Responsive adjustments for mobile devices */
+@media(max-width:600px){
+  .close-btn{
+    top:-30px;
+    font-size:25px;
+  }
+  .video-box{
+    width:95%;
+  }
+}
+</style>
+
+<script>
+// VIP toggle
+function toggleVIP(id){
+  const clickedBox = document.getElementById(id);
+  const isOpen = clickedBox.style.display === "block";
+
+  document.querySelectorAll('[id^="vip"]').forEach(box=>{
+    box.style.display = "none";
+  });
+
+  if(!isOpen){
+    clickedBox.style.display = "block";
+  }
+}
+
+// Open video modal
+function openVideo(src){
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("popupVideo");
+
+  video.src = src;
+  modal.style.display = "flex";
+  video.play().catch(()=>{ /* mobile autoplay restrictions */ });
+}
+
+// Close video modal
+function closeVideo(){
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("popupVideo");
+
+  video.pause();
+  video.src = "";
+  modal.style.display = "none";
+}
+</script>
+<!-- ================= ALL COURSES ================= -->
+<div class="section">
+<h2>📚 All Courses</h2>
+
 <a href="https://t.me/+XargNGetXbI0ZDFl" class="button">
 <img src="courses-by-ankit.jpg" class="course-img">
 <span>300+ Courses Available</span>
 </a>
 
-<a href="https://t.me/EditToEarnCoursesbyAnkit" class="button"><img src="saq.png" class="course-img"><span>Edit To Earn – Saqlain Khan</span></a>
-<a href="https://t.me/CouresbyAnkit/304" class="button"><img src="mr beast.jpg" class="course-img"><span>MrBeast Editor Course</span></a>
-<a href="https://t.me/CouresbyAnkit/447" class="button"><img src="capcut.jpg" class="course-img"><span>CapCut Mastery</span></a>
-<a href="https://t.me/c/2982986804/286/287" class="button"><img src="training.jpg" class="course-img"><span>Jeet Selal Training Course</span></a>
-<a href="https://t.me/c/2982986804/507/508" class="button"><img src="kavya.png" class="course-img"><span>Go Viral – Kavya Karnatac</span></a>
-<a href="https://t.me/CouresbyAnkit/705" class="button"><img src="detyo.jpg" class="course-img"><span>Detyo Bon Instagram Course</span></a>
-<a href="https://t.me/CouresbyAnkit/622" class="button"><img src="ammar.jpg" class="course-img"><span>YouTube Automation – Ammar Nisar</span></a>
-<a href="https://t.me/CouresbyAnkit/238" class="button"><img src="18 days.jpg" class="course-img"><span>Beat YouTube in 18 Days – Algrow</span></a>
-<a href="https://t.me/c/2982986804/233/234" class="button"><img src="reasearch.jpg" class="course-img"><span>Research, Script & Storytelling</span></a>
-<a href="https://t.me/c/2982986804/115/116" class="button"><img src="dhruv.jpg" class="course-img"><span>Master ChatGPT – Dhruv Rathee</span></a>
-<a href="https://t.me/c/2982986804/45/47" class="button"><img src="time.jpg" class="course-img"><span>Master Time Management – Dhruv Rathee</span></a>
-<a href="https://t.me/CouresbyAnkit/284" class="button"><img src="ankur.jpg" class="course-img"><span>Time Management for Students – Ankur Warikoo</span></a>
-<a href="https://t.me/c/2982986804/530/531" class="button"><img src="take.jpg" class="course-img"><span>Take Charge of Your Money – Ankur Warikoo</span></a>
-<a href="https://t.me/c/2982986804/4/5" class="button"><img src="attraction.jpg" class="course-img"><span>Attraction Decoded – Iron Man Lifestyle</span></a>
+<a href="https://t.me/EditToEarnCoursesbyAnkit" class="button">
+<img src="saq.png" class="course-img">
+<span>Edit To Earn – Saqlain Khan</span>
+</a>
+
+<a href="https://t.me/CouresbyAnkit/304" class="button">
+<img src="mr beast.jpg" class="course-img">
+<span>MrBeast Editor Course</span>
+</a>
+
+<a href="https://t.me/CouresbyAnkit/447" class="button">
+<img src="capcut.jpg" class="course-img">
+<span>CapCut Mastery</span>
+</a>
+
+<a href="https://t.me/c/2982986804/286/287" class="button">
+<img src="training.jpg" class="course-img">
+<span>Jeet Selal Training Course</span>
+</a>
+
+<a href="https://t.me/c/2982986804/507/508" class="button">
+<img src="kavya.png" class="course-img">
+<span>Go Viral – Kavya Karnatac</span>
+</a>
+
+<a href="https://t.me/CouresbyAnkit/705" class="button">
+<img src="detyo.jpg" class="course-img">
+<span>Detyo Bon Instagram Course</span>
+</a>
+
+<a href="https://t.me/CouresbyAnkit/622" class="button">
+<img src="ammar.jpg" class="course-img">
+<span>YouTube Automation – Ammar Nisar</span>
+</a>
+
+<a href="https://t.me/CouresbyAnkit/238" class="button">
+<img src="18 days.jpg" class="course-img">
+<span>Beat YouTube in 18 Days – Algrow</span>
+</a>
+
+<a href="https://t.me/c/2982986804/233/234" class="button">
+<img src="reasearch.jpg" class="course-img">
+<span>Research, Script & Storytelling</span>
+</a>
+
+<a href="https://t.me/c/2982986804/115/116" class="button">
+<img src="dhruv.jpg" class="course-img">
+<span>Master ChatGPT – Dhruv Rathee</span>
+</a>
+
+<a href="https://t.me/c/2982986804/45/47" class="button">
+<img src="time.jpg" class="course-img">
+<span>Master Time Management – Dhruv Rathee</span>
+</a>
+
+<a href="https://t.me/CouresbyAnkit/284" class="button">
+<img src="ankur.jpg" class="course-img">
+<span>Time Management for Students – Ankur Warikoo</span>
+</a>
+
+<a href="https://t.me/c/2982986804/530/531" class="button">
+<img src="take.jpg" class="course-img">
+<span>Take Charge of Your Money – Ankur Warikoo</span>
+</a>
+
+<a href="https://t.me/c/2982986804/4/5" class="button">
+<img src="attraction.jpg" class="course-img">
+<span>Attraction Decoded – Iron Man Lifestyle</span>
+</a>
+
+</div>
+
+<!-- ================= OTHER PLATFORMS ================= -->
+<div class="section">
+<h2>🌐 Other Platforms</h2>
 
 <a href="https://www.youtube.com/channel/UCRcb-cnLd4a80ML4VkHNWlA" class="button">
 <img src="yt.png" class="course-img">
@@ -446,14 +682,40 @@ Courses by Ankit offers 300+ free and VIP online courses including Video Editing
 
 <a href="https://t.me/CouresbyAnkit" class="button">
 <img src="courses-by-ankit.jpg" class="course-img">
-<span>Free Telegram Course Group</span>
+<span>Telegram Channel</span>
 </a>
+
+</div>
 
 <div class="footer">
 Courses by Ankit | Learn & Grow Together 🌟
 </div>
 
 </div>
+
+
+
+
+<script>
+function toggleVIP(id){
+
+  const clickedBox = document.getElementById(id);
+  const isOpen = clickedBox.style.display === "block";
+
+  // hide all VIP option boxes
+  document.querySelectorAll('[id^="vip"]').forEach(box=>{
+    box.style.display = "none";
+  });
+
+  // if it was closed → open it
+  // if it was open → keep closed (toggle off)
+  if(!isOpen){
+    clickedBox.style.display = "block";
+  }
+}
+</script>
+</body>
+</html>
 
 
 
